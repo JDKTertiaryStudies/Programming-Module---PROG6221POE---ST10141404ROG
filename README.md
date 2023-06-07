@@ -1,5 +1,5 @@
 # Programming-Module---PROG6221POE---ST10141404ROG
-This the repository for my PROG6221 POE Part 2
+This the repository for my PROG6221 POE Part 2 & Final POE (PART 3)
 
 This implementation consists of several classes: Ingredient, Step, Recipe, RecipeManager, and the Program class which contains the main entry point of the application.
 
