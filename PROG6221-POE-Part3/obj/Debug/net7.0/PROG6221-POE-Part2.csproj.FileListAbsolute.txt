@@ -1,0 +1,15 @@
+C:\Users\Junaid D. Koopman\source\repos\PROG6221-POE-Part2\obj\Debug\net7.0\PROG6221-POE-Part2.csproj.AssemblyReference.cache
+C:\Users\Junaid D. Koopman\source\repos\PROG6221-POE-Part2\obj\Debug\net7.0\PROG6221-POE-Part2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Junaid D. Koopman\source\repos\PROG6221-POE-Part2\obj\Debug\net7.0\PROG6221-POE-Part2.AssemblyInfoInputs.cache
+C:\Users\Junaid D. Koopman\source\repos\PROG6221-POE-Part2\obj\Debug\net7.0\PROG6221-POE-Part2.AssemblyInfo.cs
+C:\Users\Junaid D. Koopman\source\repos\PROG6221-POE-Part2\obj\Debug\net7.0\PROG6221-POE-Part2.csproj.CoreCompileInputs.cache
+C:\Users\Junaid D. Koopman\source\repos\PROG6221-POE-Part2\bin\Debug\net7.0\PROG6221-POE-Part2.exe
+C:\Users\Junaid D. Koopman\source\repos\PROG6221-POE-Part2\bin\Debug\net7.0\PROG6221-POE-Part2.deps.json
+C:\Users\Junaid D. Koopman\source\repos\PROG6221-POE-Part2\bin\Debug\net7.0\PROG6221-POE-Part2.runtimeconfig.json
+C:\Users\Junaid D. Koopman\source\repos\PROG6221-POE-Part2\bin\Debug\net7.0\PROG6221-POE-Part2.dll
+C:\Users\Junaid D. Koopman\source\repos\PROG6221-POE-Part2\bin\Debug\net7.0\PROG6221-POE-Part2.pdb
+C:\Users\Junaid D. Koopman\source\repos\PROG6221-POE-Part2\obj\Debug\net7.0\PROG6221-POE-Part2.dll
+C:\Users\Junaid D. Koopman\source\repos\PROG6221-POE-Part2\obj\Debug\net7.0\refint\PROG6221-POE-Part2.dll
+C:\Users\Junaid D. Koopman\source\repos\PROG6221-POE-Part2\obj\Debug\net7.0\PROG6221-POE-Part2.pdb
+C:\Users\Junaid D. Koopman\source\repos\PROG6221-POE-Part2\obj\Debug\net7.0\PROG6221-POE-Part2.genruntimeconfig.cache
+C:\Users\Junaid D. Koopman\source\repos\PROG6221-POE-Part2\obj\Debug\net7.0\ref\PROG6221-POE-Part2.dll

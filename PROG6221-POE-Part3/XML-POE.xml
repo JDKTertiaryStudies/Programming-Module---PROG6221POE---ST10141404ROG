@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="RecipeApplication.RecipeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Recipe Application" Height="450" Width="800">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Label Content="Recipe Name:" Margin="5"/>
+            <TextBox x:Name="RecipeNameTextBox" Margin="5"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+            <Label Content="Calories:" Margin="5"/>
+            <Label x:Name="TotalCaloriesLabel" Margin="5"/>
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <ListView x:Name="RecipeListView" Grid.Column="0" Margin="5" ItemsSource="{Binding Recipes}" DisplayMemberPath="Name" SelectionChanged="RecipeListView_SelectionChanged">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn Header="Total Calories" DisplayMemberBinding="{Binding TotalCalories}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+            <StackPanel Grid.Column="1" Margin="5">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Ingredients:" Margin="5"/>
+                    <Button x:Name="AddIngredientButton" Content="Add" Margin="5" Click="AddIngredientButton_Click"/>
+                </StackPanel>
+
+                <ListView x:Name="IngredientsListView" Margin="5" ItemsSource="{Binding SelectedRecipe.Ingredients}" DisplayMemberPath="Name">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
+                            <GridViewColumn Header="Quantity" DisplayMemberBinding="{Binding Quantity}"/>
+                            <GridViewColumn Header="Unit" DisplayMemberBinding="{Binding Unit}"/>
+                            <GridViewColumn Header="Calories" DisplayMemberBinding="{Binding Calories}"/>
+                            <GridViewColumn Header="Food Group" DisplayMemberBinding="{Binding FoodGroup}"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Steps:" Margin="5"/>
+                    <Button x:Name="AddStepButton" Content="Add" Margin="5" Click="AddStepButton_Click"/>
+                </StackPanel>
+
+                <ListView x:Name="StepsListView" Margin="5" ItemsSource="{Binding SelectedRecipe.Steps}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Step" DisplayMemberBinding="{Binding}"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="ScaleRecipeButton" Content="Scale Recipe" Margin="5" Click="ScaleRecipeButton_Click"/>
+                    <Button x:Name="ResetQuantitiesButton" Content="Reset Quantities" Margin="5" Click="ResetQuantitiesButton_Click"/>
+                    <Button x:Name="ClearDataButton" Content="Clear Data" Margin="5" Click="ClearDataButton_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
