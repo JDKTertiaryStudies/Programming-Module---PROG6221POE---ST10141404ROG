@@ -1,0 +1,106 @@
+﻿<Window x:Class="FinalPOE.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts"
+        Title="Final POE" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Button Content="Add Recipe" Click="AddRecipe_Click"/>
+            <Button Content="Display Recipe List" Click="DisplayRecipeList_Click"/>
+        </StackPanel>
+
+        <GroupBox x:Name="recipeGroupBox" Grid.Row="1" Margin="10" Visibility="Collapsed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Text="Recipe Details" FontSize="18" FontWeight="Bold" Margin="5"/>
+
+                <StackPanel Grid.Row="1" Margin="5">
+                    <TextBlock Text="Ingredients:"/>
+                    <ListBox x:Name="ingredientListBox" SelectionMode="Extended">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Name}"/>
+                                    <TextBlock Text="{Binding Quantity, StringFormat='Quantity: {0}'}"/>
+                                    <TextBlock Text="{Binding Unit}"/>
+                                    <TextBlock Text="{Binding Calories, StringFormat='Calories: {0}'}"/>
+                                    <TextBlock Text="{Binding FoodGroup}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Margin="5" Grid.Column="1">
+                    <TextBlock Text="Steps:"/>
+                    <ListBox x:Name="stepListBox" SelectionMode="Extended">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Description}"/>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox x:Name="recipeListGroupBox" Grid.Row="1" Margin="10" Visibility="Collapsed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Text="Recipe List" FontSize="18" FontWeight="Bold" Margin="5"/>
+
+                <StackPanel Grid.Row="1" Margin="5">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Filter by Ingredients:"/>
+                        <TextBox x:Name="ingredientFilterTextBox" Width="200" Margin="5"/>
+                        <Button Content="Apply" Click="IngredientFilterButton_Click"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,10">
+                        <TextBlock Text="Filter by Food Group:"/>
+                        <TextBox x:Name="foodGroupFilterTextBox" Width="200" Margin="5"/>
+                        <Button Content="Apply" Click="FoodGroupFilterButton_Click"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,10">
+                        <TextBlock Text="Filter by Max Calories:"/>
+                        <TextBox x:Name="maxCaloriesFilterTextBox" Width="100" Margin="5"/>
+                        <Button Content="Apply" Click="MaxCaloriesFilterButton_Click"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,10">
+                        <Button Content="Reset Filters" Click="ResetFiltersButton_Click"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <ListBox x:Name="recipeListBox" Grid.Row="1" Margin="5" SelectionMode="Single">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}"/>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
+        </GroupBox>
+
+        <dxc:ChartControl x:Name="foodGroupPieChart" Grid.Row="1" Margin="10" Visibility="Collapsed">
+            <dxc:PieSeries2D DisplayNamePattern="{}{A}" DataSource="{Binding}" ArgumentDataMember="FoodGroup" ValueDataMember="Percentage" LabelPosition="Inside">
+                <dxc:PieSeries2D.Label>
+                    <dxc:PieSeriesLabel Position="Inside" ShowForZeroValues="False"/>
+                </dxc:PieSeries2D.Label>
+            </dxc:PieSeries2D>
+        </dxc:ChartControl>
+    </Grid>
+</Window>
+
+

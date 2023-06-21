@@ -1,0 +1,5 @@
+C:\Users\Junaid D. Koopman\source\repos\Final POE\obj\Debug\net7.0\Final POE.csproj.AssemblyReference.cache
+C:\Users\Junaid D. Koopman\source\repos\Final POE\obj\Debug\net7.0\Final POE.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Junaid D. Koopman\source\repos\Final POE\obj\Debug\net7.0\Final POE.AssemblyInfoInputs.cache
+C:\Users\Junaid D. Koopman\source\repos\Final POE\obj\Debug\net7.0\Final POE.AssemblyInfo.cs
+C:\Users\Junaid D. Koopman\source\repos\Final POE\obj\Debug\net7.0\Final POE.csproj.CoreCompileInputs.cache
